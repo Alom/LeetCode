@@ -33,7 +33,7 @@ def maxPoints(points):
 				if po3 in temp:
 					continue;
 				det = po1.x*(po2.y - po3.y) + po2.x*(po3.y - po1.y) + po3.x*(po1.y - po2.y)
-				print det;
+				#print det;
 				if det == 0:
 					temp.append(po3);
 
@@ -41,6 +41,7 @@ def maxPoints(points):
 			temp = [];
 
 	print result
+	print count
 	current = 0;
 	for ps in result:
 		if len(ps) > current:
@@ -60,5 +61,12 @@ a1= []
 a1.append(Point(0,0))
 a1.append(Point(0,0))
 
-print maxPoints(a1);
+b = [(-230,324),(-291,141),(34,-2),(80,22),(-28,-134),(40,-23),(-72,-149),(0,-17),(32,-32),(-207,288),(7,32),(-5,0),(-161,216),(-48,-122),(-3,39),(-40,-113),(115,-216),(-112,-464),(-72,-149),(-32,-104),(12,42),(-22,19),(-6,-21),(-48,-122),(161,-288),(16,11),(39,23),(39,30),(873,-111)]
+a2 = []
+for p in b:
+	a2.append(Point(p));
+
+
+print maxPoints(a2);
+print len(a2)
 
