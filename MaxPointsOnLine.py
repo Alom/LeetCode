@@ -24,7 +24,7 @@ def maxPoints(points):
 		points2.remove(po1);
 		points3 = [];
 		for po in points2:
-			count = count + 1;
+			#count = count + 1;
 			points3.append(po);
 		for po2 in points2:
 			if po1 not in temp:
@@ -44,9 +44,9 @@ def maxPoints(points):
 			temp.append(po2);
 			points3.remove(po2)
 			for po3 in points3:
-				count = count + 1;
 				if po3 in temp:
 					continue;
+				count = count + 1;
 				det = po1.x*(po2.y - po3.y) + po2.x*(po3.y - po1.y) + po3.x*(po1.y - po2.y)
 				#print det;
 				if det == 0:
